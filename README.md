@@ -3,12 +3,33 @@ trento-testing
 
 Trento summer school - testing files for C language
 - this repository will contain files, which are just for testing of various functions in the group of students working in C
+- you can create a local clone of this repository by
 
+"git clone ssh://git@github.com/a-repko/trento-testing testing"
+
+- where "testing" is the name of directory which will be created in you actual directory, and will contain the contents of this repository
+- when you do some changes, you can send them by running (in the directory "testing", or whatever) first
+
+"git add file1 file2 file3"
+
+(these files will included in the "commit" and "push" command), then run
+
+"git commit"
+
+and then
+
+"git push"
+
+- if you want to download the new files from GitHub, just run
+
+"git pull"
+
+======
 
 hello.c: the most basic C program. Compile it with
-  make hello
+  "make hello"
 or
-  gcc -o hello hello.c
+  "gcc -o hello hello.c"
 
 Makefile: contains commands for compiling the programs
 - command "make" will compile all
