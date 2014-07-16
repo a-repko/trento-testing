@@ -24,7 +24,7 @@ and then
 
 "git pull"
 
-C compiler for Windows is awailable as a part of Mingw project (http://www.mingw.org/). First download and install the "Installer", then you can choose which parts you wan to actually install (gcc, gfortran).
+C compiler for Windows is available as a part of MinGW project (http://www.mingw.org/). First download and install the "Installer", then you can choose which parts you wan to actually install (gcc, gfortran).
 
 ======
 
@@ -37,6 +37,7 @@ Makefile: contains commands for compiling the programs
 - command "make" will compile all
 
 mtrx_test.c: diagonalization of a random matrix with LAPACK routine dsyevr
+- compilation on Mac needs addition of "-llapack" in makefile
 
 sho.c: implementation of spherical harmonic oscillator wavefunctions
 
@@ -48,5 +49,7 @@ sho_test.c: testing of orthogonality of R_nl(r) with Simpson integration
 
 sho_test_gauss.c: testing of orthogonality of R_nl(r) with Gauss-Laguerre integration
 
-gauleg.c: generation of Gauss-Laguerre abscissas and weights
+gauleg.c: generation of Gauss-Laguerre abscissas and weights (for given exponent and scaling)
 
+hydrogen.c: diagonalization of hydrogen atom in spherical HO basis
+- compilation on Mac needs addition of "-llapack" in makefile

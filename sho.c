@@ -1,10 +1,10 @@
 #include <math.h>
 
-// Anton Repko, 15th July 2014
+// Anton Repko, 16th July 2014
 // spherical harmonic oscillator - calculation of R_nl(r) in
 // psi_nlm(r) = R_nl(r) * Y_lm(theta,phi)
 
-// utilized formula (either straight or through a special recursion):
+// corresponding formula (in fact, a special recursion relations are used instead):
 // R_nl(r) = 2 * (mw/pi)^0.25 * exp(-mw * r^2 / 2) * r^l
 // * sqrt(2^l * mw^(l+1) * (2n+2l+1)!! / (2^n * n!))
 // * sum(i=0..n){binom(i,n) * (-2*mw*r^2)^i / (2l+2i+1)!!}
@@ -32,7 +32,7 @@ double sho_wf (double r, double mw, int n, int l)
   factor = mw;
   for (i = 3; i <= 2 * npl + 1; i += 2)
     factor *= 2 * mwr2 / i;
-  last2 = sqrt(factor);
+  last2 = sqrt(factor);  // this corresponds to R_{0(n+l)}(r)
   if (l == npl)
     cur = last2;
   last = ((npl + 0.5) / x - x) * last2;

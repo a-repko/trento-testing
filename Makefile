@@ -1,5 +1,5 @@
 
-all: mtrx_test sho_print sho_test gaulag sho_test_gauss
+all: mtrx_test sho_print sho_test gaulag sho_test_gauss hydrogen
 
 hello: hello.c
 	gcc -o hello hello.c
@@ -18,3 +18,6 @@ gaulag: gaulag.c
 
 sho_test_gauss: sho_test_gauss.c sho.c
 	gcc -o sho_test_gauss sho_test_gauss.c sho.c -lm
+
+hydrogen: hydrogen.c sho.c
+	gcc -o hydrogen hydrogen.c sho.c -lm -llapacke

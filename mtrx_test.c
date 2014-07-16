@@ -20,8 +20,8 @@ int main (int argc, char *argv[])
 {
   int N, i, j, err, nfound, *isup;
   double **a, *lam, **eigvec;
-  printf ("Give the matrix dimension: ");
-  scanf ("%d", &N);
+  printf("Give the matrix dimension: ");
+  scanf("%d", &N);
   nfound = 0;
   a = alloc_matrix(N, N);  // matrix NxN
   eigvec = alloc_matrix(N, N); // matrix for eigenvectors
@@ -56,5 +56,6 @@ int main (int argc, char *argv[])
       printf ("%lf ", a[i][j]);
     printf ("\n");
   } */
+  free(a[0]); free(a); free(eigvec[0]); free(eigvec); free(lam); free(isup);
   return 0;
 }

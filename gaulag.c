@@ -101,5 +101,6 @@ int main(int argc, char *argv[])
       printf("\n");
   }
   printf("%.13lf };\n", w[n-1] * exp(x[n-1]) * pow(x[n-1],-a) * scale);
+  free(x); free(w);
   return 0;
 }
