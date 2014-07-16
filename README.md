@@ -7,8 +7,8 @@ Trento summer school - testing files for C language
 
 "git clone ssh://git@github.com/a-repko/trento-testing testing"
 
-- where "testing" is the name of directory which will be created in you actual directory, and will contain the contents of this repository
-- when you do some changes, you can send them by running (in the directory "testing", or whatever) first
+- where "testing" is the name of directory which will be created in you current directory, and will contain the contents of this repository
+- when you do some changes, you can send them by running (in the directory "testing", or whatever you chose) first
 
 "git add file1 file2 file3"
 
@@ -24,6 +24,8 @@ and then
 
 "git pull"
 
+C compiler for Windows is awailable as a part of Mingw project (http://www.mingw.org/). First download and install the "Installer", then you can choose which parts you wan to actually install (gcc, gfortran).
+
 ======
 
 hello.c: the most basic C program. Compile it with
@@ -36,7 +38,7 @@ Makefile: contains commands for compiling the programs
 
 mtrx_test.c: diagonalization of a random matrix with LAPACK routine dsyevr
 
-sho.c: implementation of spherical harmoni oscillator wavefunctions
+sho.c: implementation of spherical harmonic oscillator wavefunctions
 
 sho_print.c: interface program for making a table of R_nl(r) values
 - use it like "./sho_print 1 20 10 0.01 20. >harm_osc_n=20_l=10.txt"

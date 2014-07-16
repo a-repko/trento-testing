@@ -10,5 +10,5 @@ mtrx_test: mtrx_test.c
 sho_print: sho_print.c sho.c
 	gcc -o sho_print sho_print.c sho.c -lm
 
-sho_list: sho_list.c sho.c
-	gcc -o sho_list sho_list.c sho.c -lm
+sho_test: sho_test.c sho.c
+	gcc -o sho_test sho_test.c sho.c -lm
